@@ -38,6 +38,6 @@ The pipeline includes a custom tuning script to evaluate pooling dimensions (`po
 ### Full Technical Report
 For the complete mathematical formulation, hyperparameter justification, and in-depth analysis of False Positives/False Negatives across the datasets, please refer to our final IEEE-formatted technical report:
 
-📄 [**Read the Full Technical Report (svm_ad_report.pdf)**](./svm_ad_report.pdf)
+[**Read the Full Technical Report (svm_ad_report.pdf)**](./svm_ad_report.pdf)
 
 *(Note: The MVTec dataset images used for training/testing have been excluded from this repository, but the complete code is available above).*
