@@ -1,9 +1,8 @@
 # Visual Anomaly Detection via One-Class SVM
 
 **Overview:** 
-This repository contains a machine learning pipeline designed to detect visual anomalies and structural defects in images. Rather than training a deep classifier from scratch on limited data, this model leverages a pre-trained Convolutional Neural Network (CNN) as a feature extractor, paired with a classical One-Class Support Vector Machine (OC-SVM) for decision boundary formulation.
+This repository contains a machine learning pipeline, collaboratively designed with Abdel Yasser Mohamed, to detect visual anomalies and structural defects in images. Rather than training a deep classifier from scratch on limited data, this model leverages a pre-trained Convolutional Neural Network (CNN) as a feature extractor, paired with a classical One-Class Support Vector Machine (OC-SVM) for decision boundary formulation.
 
-This was developed collaboratively with Abdel Yasser Mohamed as a final project for the University of Victoria's ECE 471 (Computer Vision) course.
 
 ### Technical Stack
 * **Deep Learning:** PyTorch, Torchvision
