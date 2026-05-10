@@ -77,7 +77,6 @@ class AnomalyDetector:
                                  std=[0.229, 0.224, 0.225]),
         ])
 
-
     # Extract features and reduce to a fixed small size via adaptive average
     # pooling. With only 18ish training images we need a compact representation
     def _extract_features(self, images: np.ndarray) -> np.ndarray:
@@ -122,6 +121,7 @@ class AnomalyDetector:
         min_s, max_s = anomaly_scores.min(), anomaly_scores.max()
         if max_s > min_s:
             anomaly_scores = (anomaly_scores - min_s) / (max_s - min_s)
+            
         return anomaly_scores
 
 def extended_evaluation(ad, class_name: str):
