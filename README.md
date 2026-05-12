@@ -27,6 +27,6 @@ This also includes a tuning script to evaluate pooling dimensions (`pool_dim`: 3
 * **Average AUROC:** 80.9% (Standard Deviation: 0.044)
 
 ### Technical Report
-For the complete mathematical formulation, hyperparameter justification, and analysis of FP/FN relations across the datasets, refer to the attached [**IEEE style report**](./svm_ad_report.pdf):
+For the complete mathematical formulation, hyperparameter justification, and analysis of FP/FN relations across the datasets, refer to the attached [**report**](./svm_ad_report.pdf):
 
-*(Note: The MVTec dataset images used for training/testing are not included in this repository).*
+*(Note: The MVTec dataset images used for training/testing are not included in this repository)*
