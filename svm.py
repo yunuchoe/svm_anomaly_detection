@@ -80,19 +80,17 @@ class AnomalyDetector:
     # Extract features and reduce to a fixed small size via adaptive average
     # pooling. With only 18ish training images we need a compact representation
     def _extract_features(self, images: np.ndarray) -> np.ndarray:
-      tensors = torch.stack([self.preprocess((img * 255).astype(np.uint8))
+        tensors = torch.stack([self.preprocess((img * 255).astype(np.uint8))
                             for img in images])
 
-      with torch.no_grad():
-          feats = self.feature_extractor(tensors) # (N, 1280, 1, 1)
+        with torch.no_grad():
+            feats = self.feature_extractor(tensors) # (N, 1280, 1, 1)
 
-          # Pool down to `self.pool_dim` dims directly, no PCA needed
-          feats = torch.nn.functional.adaptive_avg_pool2d(
-              feats.reshape(feats.shape[0], 1, 1, -1),
-              (1, self.pool_dim)
-          )
+            # Pool down to `self.pool_dim` dims directly, no PCA needed
+            feats = torch.nn.functional.adaptive_avg_pool2d( feats.reshape(feats.shape[0], 1, 1, -1),
+                                                            (1, self.pool_dim) )
 
-      return feats.squeeze().numpy()# (N, pool_dim)
+        return feats.squeeze().numpy()# (N, pool_dim)
 
 
     def create_model(self, dataset: np.ndarray):
